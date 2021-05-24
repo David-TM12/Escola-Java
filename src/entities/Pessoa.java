@@ -3,8 +3,8 @@ package entities;
 public class Pessoa {
     private String nome;
     private int idade;
-    private int rg;
-    private int cpf;
+    private String rg;
+    private String cpf;
     private String telefone;
     private String endereco;
 
@@ -12,7 +12,7 @@ public class Pessoa {
 
     }
 
-    public Pessoa(String nome, int idade, int rg, int cpf, String telefone, String endereco) {
+    public Pessoa(String nome, int idade, String rg, String cpf, String telefone, String endereco) {
         this.nome = nome;
         this.idade = idade;
         this.rg = rg;
@@ -42,19 +42,19 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public int getRg() {
+    public String getRg() {
         return rg;
     }
 
-    public void setRg(int rg) {
+    public void setRg(String rg) {
         this.rg = rg;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

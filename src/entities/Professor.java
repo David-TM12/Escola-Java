@@ -7,10 +7,10 @@ public class Professor extends Pessoa{
     private List<String> materias;
     private List<String> turmas;
     private int horas;
-    private Double valorPorHora;
+    private double valorPorHora;
     private double salario;
 
-    public Professor(String nome, int idade, int rg, int cpf, String telefone, String endereco, List<String> materias, List<String> turmas, int horas, Double valorPorHora) {
+    public Professor(String nome, int idade, String rg, String cpf, String telefone, String endereco, List<String> materias, List<String> turmas, int horas, double valorPorHora) {
         super(nome, idade, rg, cpf, telefone, endereco);
         this.materias = materias;
         this.turmas = turmas;
@@ -42,11 +42,11 @@ public class Professor extends Pessoa{
         this.horas = horas;
     }
 
-    public Double getValorPorHora() {
+    public double getValorPorHora() {
         return valorPorHora;
     }
 
-    public void setValorPorHora(Double valorPorHora) {
+    public void setValorPorHora(double valorPorHora) {
         this.valorPorHora = valorPorHora;
     }
 
@@ -54,4 +54,7 @@ public class Professor extends Pessoa{
         return salario;
     }
 
+    public void calculaSalario(){
+        this.salario = horas * valorPorHora;
+    }
 }
