@@ -9,17 +9,20 @@ public class Aluno extends Pessoa{
     private int matricula;
     private String serie;
     private double media;
+    private String tipoAluno;
     private List<Double> notas = new ArrayList<>();
+
 
     public Aluno(){
         super();
     }
 
-    public Aluno(String nome, int idade, int matricula, String serie, List<Double> notas) {
+    public Aluno(String nome, int idade, int matricula, String serie, List<Double> notas, String tipoAluno) {
         super(nome, idade);
         this.matricula = matricula;
         this.serie = serie;
         this.notas = notas;
+        this.tipoAluno = tipoAluno;
     }
 
 
@@ -51,6 +54,13 @@ public class Aluno extends Pessoa{
         this.notas = notas;
     }
 
+    public String getTipoAluno() {
+        return tipoAluno;
+    }
+
+    public void setTipoAluno(String tipoAluno) {
+        this.tipoAluno = tipoAluno;
+    }
 
     public void calcularMedia(){
         double somatorio = 0.0;
@@ -61,5 +71,10 @@ public class Aluno extends Pessoa{
         }
 
         this.media = somatorio/total;
+    }
+
+    public String Situacao(){
+        //para aluno medio a media e de 5 e para aluno superior a media é 7
+        return "";
     }
 }
